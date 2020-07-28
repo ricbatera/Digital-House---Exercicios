@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    width: 50%;
+    height: 300px;
+    /* justify-content: center; */
+    /* align-items: center;
+    align-items: flex-end;
+    align-items: baseline; */
+}
+div{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.d2{
+    /* width: 150px; */
+    justify-content: center;
+    /* align-items: flex-end; */
+    align-content: flex-start;
+}
+.d1{
+    height: 100%;
+    width: 10%;
+}

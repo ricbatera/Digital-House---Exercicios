@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    <div class="conteudo">
+        <h1>Formulário de Contato</h1>
+        <a href="index.html">voltar ao início</a>
+        <br>
+        <br>
+        <div>
+            <form action="#" method="POST">
+                <label for="nome">Nome Completo</label>
+                <input id="nome" type="text" name="nome" placeholder="digite o nome completo">
+                
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="email@provedor.com">
+
+                <label for="assunto">Escolha um assunto</label>
+                <select name="assunto" id="assunto">
+                    <option value="en">Entrevista</option>
+                    <option value="es">Estágio</option>
+                    <option value="te">Teste Prático</option>
+                </select>
+                <br>
+                <br>
+                <label for="genero">Gênero</label>
+                <input type="radio" name="genero" id="masc" value="Masculino" checked> Masculino
+                <input type="radio" name="genero" id="fem" value="Feminino"> Feminino
+                <input type="radio" name="genero" id="nao-resp" value="Prefiro não responder">Prefiro não Responder
+
+                <label for="passatempo">Passatempos</label>
+                <input type="checkbox" name="passatempo" id="musica" value="Música">Tocar bateria
+                <input type="checkbox" name="passatempo" id="churrasco" value="Churrasco">Churrasco
+                <input type="checkbox" name="passatempo" id="ler" value="Churrasco">Ler
+                <input type="checkbox" name="passatempo" id="xadrez" value="jogar xadrez">Jogar xadrez
+                <input type="checkbox" name="passatempo" id="game" value="Jogar Games">Jogar games
+                <br>
+                <br>
+                <label for="comentario">Comentários</label>
+                <textarea name="comentario" id="comentário" cols="30" rows="10" placeholder="seu comentário aqui"></textarea>
+                <br>
+                <br>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar campos">
+            </form>
+        </div>
+    </div>
+    <footer class="rodape">
+        <span>Curso Digital House - Full Stack - Java</span>
+    </footer>
+</body>
+</html>

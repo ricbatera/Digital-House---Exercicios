@@ -1,0 +1,104 @@
+body{
+    background-color: #bcf2ff;
+    font-family: 'Domine', serif;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+.menu{
+    position: fixed;
+    z-index: 9;
+    display: inline-block;
+    background-color: #f05331;
+    color: #fff;
+    padding: 20px 10px;
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 960px;
+    text-align: left;
+    
+       
+}
+.menu span a{
+    margin-left: 25px;
+    color: #fff;
+    text-decoration: none;
+}
+.menu span a:hover{
+    background-color: #fff;
+    color: #f05331;
+}
+.logo{
+    position: fixed;
+    top: 10px;
+    left: 200px;
+    z-index: 10;
+}
+.conteudo{
+    width: 960px;
+    display: inline-block;
+    position: relative;
+    background-color: #fff;
+    margin-top: 120px;
+    padding: 10px;
+}
+.cartao{
+    display: inline-block;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+    margin-left: 10px;
+    margin-top: 10px;  
+}
+.destaque{
+    position: absolute;
+    right: 10px;
+}
+.destaque img{
+    width: 50px;
+    height: 50px;
+}
+.c1{
+    background-image: url('../images/smart1.jpg');
+}
+.c2{
+    background-image: url('../images/tab1.jpg');
+}
+.c3{
+    background-image: url('../images/pc1.jpg');
+}
+.c4{
+    background-image: url('../images/tab2.jpg');
+}
+.c5{
+    background-image: url('../images/pc2.jpg');
+}
+.c6{
+    background-image: url('../images/smart2.jpg');
+}
+.faixa{
+    position: relative;
+    top: 40%;
+    text-align: center;
+    width: 100%;
+    padding: 5px 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    color: #fff;
+}
+.botao{
+    position: relative;
+    top: 65%;
+    text-align: center;
+}
+button{
+    background-color: red;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 5px;
+}
+button:hover{
+    background-color: #FFF;
+    color: red;
+}
