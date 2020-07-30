@@ -2,6 +2,7 @@
 function parOuImpar(num){
     num % 2 == 0 ? console.log(`${num} é par!`): console.log(`${num} é ímpar!`);
 }
+console.log('Exercício 01')
 parOuImpar(11);
 
 // 2.	Crie uma arrow function que receba um número e verifique se é primo.
@@ -23,6 +24,7 @@ const primo = num =>{
         }
     }
 }
+console.log('Exercício 02')
 primo(99);
 
 // 3.	Crie uma função que imprime de 10 até 1
@@ -37,7 +39,7 @@ function contagemRegressiva(callback){
 function feliz(){
     console.log('Feliz Ano Novo!!')
 }
-
+console.log('Exercício 03')
 contagemRegressiva(feliz);
 
 
@@ -51,6 +53,7 @@ function festaPromisse(msg){
         resolve(msg);
     });
 }
+console.log('Exercício 04')
 festaPromisse("feliz ano novo!")
 .then(resposta=>{
     console.log(resposta);
@@ -67,7 +70,7 @@ async function contagemAsyncAwait(){
         console.log(err);
     }
 }
-
+console.log('Exercício 05')
 contagemAsyncAwait();
 // 6.	Crie um array com as seguintes notas [5.3, 4.7, 8.5, 7.1, 6.4, 9.2, 9.8, 5.5, 7.4, 7.0],
 // construa uma função para imprimir apenas as notas acima de 7
@@ -79,6 +82,7 @@ function notasAcima7(notas){
        notas[i] > 7 ? console.log(notas[i]):null;
     }
 }
+console.log('Exercício 06')
 notasAcima7(notas);
 
 // 7.	Crie um array de objetos onde cada objeto será um produto de supermercado e terá o nome do 
@@ -122,7 +126,7 @@ function somaPrecos(produtos){
     }
     console.log(`R$ ${soma.toFixed(2)}`);
 }
-
+console.log('Exercício 07')
 somaPrecos(produtos);
 
 // 8.	Em uma escola ficou definido que os alunos do 8º ano terão aulas de história
@@ -186,4 +190,5 @@ function atribuicao(alunos){
         }
     }
 }
+console.log('Exercício 08')
 atribuicao(alunos);
