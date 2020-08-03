@@ -1,0 +1,14 @@
+div{
+    background-color: #ccc;
+    height: 150px;
+    width: 150px;
+}
+
+h1{
+    font-size: 4em !important;
+    text-transform: uppercase;
+}
+
+.bg1{
+    background-color: #fff;
+}
