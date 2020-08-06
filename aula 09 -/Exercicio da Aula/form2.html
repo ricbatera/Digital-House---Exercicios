@@ -6,15 +6,16 @@
     <title>Receber nome e sobrenome de um formulário</title>
 </head>
 <body>
-    <form id="form1" onsubmit="getFormvalue()">
+    <form id="form1">
         First name:<br>
-        <input type="text" name="nome" value="Neymar">
+        <input id="nome" type="text" name="nome" value="Neymar">
         <br>
         Last name:<br>
-        <input type="text" name="sobrenome" value="Jr">
-        <input type="submit" value="Enviar">
+        <input id="sobrenome" type="text" name="sobrenome" value="Jr">
+        <button type="button" onclick="getFormvalue()">Enviar</button>
+        <!-- <input type="submit" value="Enviar" > -->
     </form>
-    <div class="result">
+    <div id="result">
         
     </div>
     <script src="./js/form2.js"></script>    

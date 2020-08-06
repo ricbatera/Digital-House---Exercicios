@@ -1,10 +1,9 @@
 function getFormvalue(){    
         const nome = document.getElementById('nome').value;
-        const sobrenome = document.getElementById('sobrenome').value;
-        const resultado = document.getElementById('result').value;
+        const sobrenome = document.getElementById('sobrenome').value;        
+        const result = document.getElementById('result');
         const p = document.createElement('p');
-    
-        // const nomeCompleto = nome + " " + sobrenome;
-        // console.log(nomeCompleto);   
+        p.innerHTML = `${nome} ${sobrenome}`;
+        result.appendChild(p);
     
 }
