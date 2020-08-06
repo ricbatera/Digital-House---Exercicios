@@ -18,13 +18,13 @@ matriz_jogo['c'][1] = 0;
 matriz_jogo['c'][2] = 0;
 matriz_jogo['c'][3] = 0;
 
-$(document).ready(()=>{
-    $('#btn_iniciar_jogo').click(()=>{
-        if($('#entrada-jodador1').val()== ''){
+$(document).ready(() => {
+    $('#btn_iniciar_jogo').click(() => {
+        if ($('#entrada-jodador1').val() == '') {
             alert('Prencha o nome do jogador 1');
             return false;
         }
-        if($('#entrada-jodador2').val()== ''){
+        if ($('#entrada-jodador2').val() == '') {
             alert('Prencha o nome do jogador 2');
             return false;
         }
@@ -37,20 +37,20 @@ $(document).ready(()=>{
         $('#palco_jogo').show();
     });
 
-    $('.jogada').click(function(){
+    $('.jogada').click(function () {
         var idClicado = this.id;
         $(`#${idClicado}`).off();
         jogadaV(idClicado);
     });
 
-    function jogadaV(id){
+    function jogadaV(id) {
         let icone = "";
         let ponto = 0;
 
-        if((rodada%2)== 1){
+        if ((rodada % 2) == 1) {
             icone = 'url("./imagens/marcacao_1.png")';
             ponto = -1;
-        } else{
+        } else {
             icone = 'url("./imagens/marcacao_2.png")';
             ponto = 1;
         }
@@ -60,31 +60,45 @@ $(document).ready(()=>{
 
         let linhaXcoluna = id.split('-');
         matriz_jogo[linhaXcoluna[0]][linhaXcoluna[1]] = ponto;
-        console.log(matriz_jogo);
+        // console.log(matriz_jogo);
         verifica_combinacao();
+        verificaEmpate();
+    }
+    function verificaEmpate() {
+        if ((matriz_jogo['a'][1]) == 0 || (matriz_jogo['a'][2]) == 0 || (matriz_jogo['a'][3]) == 0) {
+            return;
+        } else if ((matriz_jogo['b'][1]) == 0 || (matriz_jogo['b'][2]) == 0 || (matriz_jogo['b'][3]) == 0){
+            return;
+        }else if((matriz_jogo['c'][1]) == 0 || (matriz_jogo['c'][2]) == 0 || (matriz_jogo['c'][3]) == 0){
+            return;
+        }else {
+            $('#vencedor').html(`Deu Velha!`);
+            $('.jogada').off();
+        }
+
     }
 
-    function verifica_combinacao(){
+    function verifica_combinacao() {
         //verifica na horizontal linha A
         var pontos = 0;
-        for(var i = 1; i <= 3; i++){
+        for (var i = 1; i <= 3; i++) {
             pontos = pontos + matriz_jogo['a'][i];
         }
         ganhador(pontos);
         //verifica na horizontal linha B
         pontos = 0;
-        for(var i = 1; i <= 3; i++){
+        for (var i = 1; i <= 3; i++) {
             pontos = pontos + matriz_jogo['b'][i];
         }
         ganhador(pontos);
         //verifica na horizontal linha C
         pontos = 0;
-        for(var i = 1; i <= 3; i++){
+        for (var i = 1; i <= 3; i++) {
             pontos = pontos + matriz_jogo['c'][i];
         }
         ganhador(pontos);
         //verifica na vertical
-        for(var l = 1; l <= 3; l++){
+        for (var l = 1; l <= 3; l++) {
             pontos = 0;
             pontos = pontos + matriz_jogo['a'][l];
             pontos = pontos + matriz_jogo['b'][l];
@@ -99,12 +113,12 @@ $(document).ready(()=>{
         pontos = matriz_jogo['a'][3] + matriz_jogo['b'][2] + matriz_jogo['c'][1];
         ganhador(pontos);
     }
-    function ganhador(pontos){
-        if(pontos == -3){            
-            $('#vencedor').html(`${$('#entrada-jodador1').val()} é o vencedor`);           
+    function ganhador(pontos) {
+        if (pontos == -3) {
+            $('#vencedor').html(`${$('#entrada-jodador1').val()} é o vencedor`);
             $('.jogada').off();
-        } else if(pontos == 3){            
-            $('#vencedor').html(`${$('#entrada-jodador2').val()} é o vencedor`);            
+        } else if (pontos == 3) {
+            $('#vencedor').html(`${$('#entrada-jodador2').val()} é o vencedor`);
             $('.jogada').off();
         }
     }
